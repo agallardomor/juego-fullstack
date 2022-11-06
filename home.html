@@ -17,11 +17,14 @@
         <h1>Juego FullStack</h1>
 
         <div class="container d-flex justify-content-around mt-5">
-            <div class="avatar-item d-flex align-items-center justify-content-center">
-                Avatar del jugador
-            </div>
+
+                <div draggable="true" id="avatar" class="avatar-item d-flex align-items-center justify-content-center">
+                    Avatar del jugador
+                </div>
+
         </div>
-        <div class="container d-flex justify-content-around mt-5">
+
+        <div class="container d-flex gap-3 justify-content-around mt-5 contenedor-salas">
             <div class="sala-item d-flex align-items-center justify-content-center">
                 Sala 1
             </div>
@@ -45,6 +48,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
