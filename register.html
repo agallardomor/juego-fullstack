@@ -26,19 +26,59 @@
                 <h2 class="fw-bold mb-2 text-uppercase">Registro de cuenta</h2>
                 <p class="text-white-50 mb-5">Introduce tu usuario y contraseña para jugar</p>
 
+
                 <div class="mb-4">
-                  <h3 class="mb-3">Selecciona un avatar</h3>
+                  <h3  class= "mb-3">Selecciona un avatar</h3>
+
                   <div class="d-flex justify-content-around">
-                    <div class="avatar-item d-flex align-items-center justify-content-center" style="background-image: url('resources/profile-img/image-1.png');">
+
+                    <label class="avatar1">
+                    <button
+                      type="button"
+                      class="avatar-item d-flex align-items-center justify-content-center" style="background-image: url('resources/profile-img/image-1.png');"
+                      id="avatar1"
+                      >
+ 
+                    </button>
+                  </label>
+
+                  <label class="avatar2">
+                    <button
+                      type="button"
+                      class="avatar-item d-flex align-items-center justify-content-center" style="background-image: url('resources/profile-img/image-2.png');"
+                      id="avatar2"
+                      >
+ 
+                    </button>
+                  </label>
+
+                  <label class="avatar3">
+                    <button
+                      type="button"
+                      class="avatar-item d-flex align-items-center justify-content-center" style="background-image: url('resources/profile-img/image-3.png');"
+                      id="avatar3"
+                      >
+ 
+                    </button>
+                  </label>
+
+                </div>
+                </div>
+
+<!--
+                <div class="mb-4">
+                  <h3  class= "mb-3">Selecciona un avatar</h3>
+                  <div class="d-flex justify-content-around">
+                    <div id="avatar1" class="avatar-item d-flex align-items-center justify-content-center" style="background-image: url('resources/profile-img/image-1.png');">
                     </div>
-                    <div class="avatar-item d-flex align-items-center justify-content-center" style="background-image: url('resources/profile-img/image-2.png');">
+                    <div id="avatar2" class="avatar-item d-flex align-items-center justify-content-center" style="background-image: url('resources/profile-img/image-2.png');">
                     </div>
-                    <div class="avatar-item d-flex align-items-center justify-content-center" style="background-image: url('resources/profile-img/image-3.png');">
+                    <div id="avatar3" class="avatar-item d-flex align-items-center justify-content-center" style="background-image: url('resources/profile-img/image-3.png');">
                     </div>
                   </div>
                 </div>
-
-                
+-->
+               
 
                 <div class="form-outline form-white mb-4">
                   <label class="form-label" for="typeEmailX">Email</label>
@@ -51,7 +91,7 @@
                 </div>
                 
                 <div class="btnRegistro">
-                  <input class="btn btn-outline-light btn-lg px-5" type="button" value="Registrarse">
+                  <input class="btn btn-outline-light btn-lg px-5" id="registrarse" type="button" value="Registrarse">
                 </div>
                 
                 <!-- <button class="btn btn-outline-light btn-lg px-5" type="submit">Registrarse</button> -->
@@ -76,6 +116,8 @@
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
     <script src="app.js"></script>
+    
+    
 </body>
 
 </html>
