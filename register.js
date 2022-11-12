@@ -1,12 +1,6 @@
-function signUp(){
-    console.log("work")
-}
 
-signUp();
 
-let main = function(){
-    capturaBoton();
-}
+
 
 let capturaBoton = function(){
     document.querySelector(".btnRegistro input").setAttribute("onclick","dataRead()");
@@ -15,41 +9,52 @@ let capturaBoton = function(){
 let dataRead = function(){
     console.log("dataRead");
     console.log(
+        document.querySelector('input[name="avatares"]:checked').value,
         document.querySelector("#typeEmailX").value,
         document.querySelector("#typePasswordX").value,
-      
     );
 
-    let myObjectResgistration ={
-        name: document.querySelector("#typeEmailX").value,
-        email: document.querySelector("#typePasswordX").value,
-        avatar1: document.querySelector("#avatar1").value,
-        avatar2: document.querySelector("#avatar2").value,
-        avatar3: document.querySelector("#avatar3").value,
-       
+    let myObjectResgistration = {};
+
+
+    myObjectResgistration = {
+        email: document.querySelector("#typeEmailX").value,
+        password: document.querySelector("#typePasswordX").value,
+        avatar: document.querySelector('input[name="avatares"]:checked').value,
     };
+
     console.log(myObjectResgistration);
 
     JSON.stringify(myObjectResgistration);
 
     save_localStorage(myObjectResgistration);
+
 }
 
 let save_localStorage = function(myObjectReg){
     localStorage.setItem("miRegistro",JSON.stringify(myObjectReg));
+    openModal();
 }
 
-let readLocalStorage = function(){
-    let miInfo = localStorage.getItem("miRegistro");
-    let myObject = JSON.parse(miRegistro);
-    document.querySelector("#typeEmailX").value = myObject.email;
-    document.querySelector("#typePasswordX").value = myObject.password;
-    
-    console.log(myObject)
+function openModal(){
+    const myModal = new bootstrap.Modal('#staticBackdrop', {
+        keyboard: false
+    })
+
+    const modalToggle = document.getElementById('staticBackdrop');
+    myModal.show(modalToggle)
+    document.querySelector("#goLoginBtn").setAttribute("onclick","goLogin()");
 }
 
-let registrarse = document.querySelector("#registrarse")
+function goLogin() {
+    window.location.href = "login.html";
+}
 
+
+
+const main = function(){
+    capturaBoton();
+}
 
 
 
