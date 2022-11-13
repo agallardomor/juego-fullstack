@@ -16,6 +16,7 @@ salas.addEventListener("dragleave", e =>{
 salas.addEventListener("drop", e =>{
     e.target.classList.remove("sala-item--hover");
     e.target.append(avatar);
+    $("#avatar-home").animate({width: '80px', height: '80px'});
 })
 
 function getDataFromURL() {

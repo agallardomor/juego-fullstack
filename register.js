@@ -1,12 +1,11 @@
 
+$(".card").delay(300).animate({opacity: 1},"slow");
 
-
-
-let capturaBoton = function(){
-    document.querySelector(".btnRegistro input").setAttribute("onclick","dataRead()");
+let capturaBoton = function () {
+    document.querySelector(".btnRegistro input").setAttribute("onclick", "dataRead()");
 }
 
-let dataRead = function(){
+let dataRead = function () {
     console.log("dataRead");
     console.log(
         document.querySelector('input[name="avatares"]:checked').value,
@@ -31,19 +30,19 @@ let dataRead = function(){
 
 }
 
-let save_localStorage = function(myObjectReg){
-    localStorage.setItem("miRegistro",JSON.stringify(myObjectReg));
+let save_localStorage = function (myObjectReg) {
+    localStorage.setItem("miRegistro", JSON.stringify(myObjectReg));
     openModal();
 }
 
-function openModal(){
+function openModal() {
     const myModal = new bootstrap.Modal('#staticBackdrop', {
         keyboard: false
     })
 
     const modalToggle = document.getElementById('staticBackdrop');
     myModal.show(modalToggle)
-    document.querySelector("#goLoginBtn").setAttribute("onclick","goLogin()");
+    document.querySelector("#goLoginBtn").setAttribute("onclick", "goLogin()");
 }
 
 function goLogin() {
@@ -52,7 +51,7 @@ function goLogin() {
 
 
 
-const main = function(){
+const main = function () {
     capturaBoton();
 }
 

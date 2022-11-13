@@ -1,5 +1,5 @@
 document.querySelector("#loginBtn").setAttribute("onclick","readLocalStorage()");
-
+$(".card").delay(300).animate({opacity: 1},"slow");
 
 function readLocalStorage () {
     let miInfo = localStorage.getItem("miRegistro");
