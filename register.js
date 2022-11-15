@@ -6,15 +6,8 @@ let capturaBoton = function () {
 }
 
 let dataRead = function () {
-    console.log("dataRead");
-    console.log(
-        document.querySelector('input[name="avatares"]:checked').value,
-        document.querySelector("#typeEmailX").value,
-        document.querySelector("#typePasswordX").value,
-    );
 
     let myObjectResgistration = {};
-
 
     myObjectResgistration = {
         email: document.querySelector("#typeEmailX").value,
@@ -22,10 +15,7 @@ let dataRead = function () {
         avatar: document.querySelector('input[name="avatares"]:checked').value,
     };
 
-    console.log(myObjectResgistration);
-
     JSON.stringify(myObjectResgistration);
-
     save_localStorage(myObjectResgistration);
 
 }
