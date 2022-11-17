@@ -36,7 +36,7 @@ function openModal() {
 }
 
 function goLogin() {
-    window.location.href = "login.html";
+    window.location.href = "login";
 }
 
 

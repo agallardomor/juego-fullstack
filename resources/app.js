@@ -30,7 +30,7 @@ function getDataFromURL() {
 
 function setAvatarImage(url){
     console.log("imagen: " + url)
-    document.getElementById("avatar-home").style.backgroundImage= `url('resources/profile-img/${url}.png')`
+    document.getElementById("avatar-home").style.backgroundImage= `url('/profile-img/${url}.png')`
 }
 
 

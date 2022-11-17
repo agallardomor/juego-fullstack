@@ -15,7 +15,7 @@ function checkUser(localEmail, localPassword, localAvatarURL){
     let formPassword = document.querySelector("#typePasswordX").value;
 
     if (localEmail == formEmail && localPassword == formPassword){
-        window.location.href=`home.html?email=${formEmail}&password=${formPassword}&avatar=${localAvatarURL}`
+        window.location.href=`home?email=${formEmail}&password=${formPassword}&avatar=${localAvatarURL}`
     } else {
         alert("usuario y/o contraseña incorrectos")
         document.querySelector("#typeEmailX").value = "";
